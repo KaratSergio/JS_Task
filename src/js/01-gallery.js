@@ -5,7 +5,7 @@ import { galleryItems } from './gallery-items';
 // Change code below this line
 const galleryContainer = document.querySelector(".gallery");
 
-galleryItems.forEach((item) => {
+const galleryEl = galleryItems.map(item => {
     const galleryItem = document.createElement("li");
     galleryItem.classList.add("gallery__item");
 
@@ -20,8 +20,10 @@ galleryItems.forEach((item) => {
 
     link.appendChild(image);
     galleryItem.appendChild(link);
-    galleryContainer.appendChild(galleryItem);
+    return galleryItem;
 });
+
+galleryContainer.append(...galleryEl);
 
 const lightbox = new SimpleLightbox(".gallery__link", {
     captions: true,
@@ -29,4 +31,3 @@ const lightbox = new SimpleLightbox(".gallery__link", {
     captionsDelay: 250
 });
 
-console.log(galleryItems);
