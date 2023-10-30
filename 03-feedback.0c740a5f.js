@@ -1,4 +1,4 @@
-var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{},t={},n={},r={};r=/**
+!function(){var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{},e={},n={},r={};r=/**
  * Checks if `value` is the
  * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
  * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
@@ -22,38 +22,38 @@ var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
  *
  * _.isObject(null);
  * // => false
- */function(e){var t=typeof e;return null!=e&&("object"==t||"function"==t)};var i={},o={},a={};a="object"==typeof e&&e&&e.Object===Object&&e;/** Detect free variable `self`. */var u="object"==typeof self&&self&&self.Object===Object&&self;o=a||u||Function("return this")(),i=function(){return o.Date.now()};var l={},f={},c={},v=/\s/;c=/**
+ */function(t){var e=typeof t;return null!=t&&("object"==e||"function"==e)};var o={},i={},a={};a="object"==typeof t&&t&&t.Object===Object&&t;/** Detect free variable `self`. */var u="object"==typeof self&&self&&self.Object===Object&&self;i=a||u||Function("return this")(),o=function(){return i.Date.now()};var f={},c={},l={},v=/\s/;l=/**
  * Used by `_.trim` and `_.trimEnd` to get the index of the last non-whitespace
  * character of `string`.
  *
  * @private
  * @param {string} string The string to inspect.
  * @returns {number} Returns the index of the last non-whitespace character.
- */function(e){for(var t=e.length;t--&&v.test(e.charAt(t)););return t};/** Used to match leading whitespace. */var d=/^\s+/;f=/**
+ */function(t){for(var e=t.length;e--&&v.test(t.charAt(e)););return e};/** Used to match leading whitespace. */var d=/^\s+/;c=/**
  * The base implementation of `_.trim`.
  *
  * @private
  * @param {string} string The string to trim.
  * @returns {string} Returns the trimmed string.
- */function(e){return e?e.slice(0,c(e)+1).replace(d,""):e};var s={},m={},p={};p=o.Symbol;var g={},b=Object.prototype,y=b.hasOwnProperty,j=b.toString,S=p?p.toStringTag:void 0;g=/**
+ */function(t){return t?t.slice(0,l(t)+1).replace(d,""):t};var s={},g={},p={};p=i.Symbol;var m={},b=Object.prototype,y=b.hasOwnProperty,h=b.toString,j=p?p.toStringTag:void 0;m=/**
  * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
  *
  * @private
  * @param {*} value The value to query.
  * @returns {string} Returns the raw `toStringTag`.
- */function(e){var t=y.call(e,S),n=e[S];try{e[S]=void 0;var r=!0}catch(e){}var i=j.call(e);return r&&(t?e[S]=n:delete e[S]),i};var h={},O=Object.prototype.toString;h=/**
+ */function(t){var e=y.call(t,j),n=t[j];try{t[j]=void 0;var r=!0}catch(t){}var o=h.call(t);return r&&(e?t[j]=n:delete t[j]),o};var O={},S=Object.prototype.toString;O=/**
  * Converts `value` to a string using `Object.prototype.toString`.
  *
  * @private
  * @param {*} value The value to convert.
  * @returns {string} Returns the converted string.
- */function(e){return O.call(e)};/** Built-in value references. */var T=p?p.toStringTag:void 0;m=/**
+ */function(t){return S.call(t)};/** Built-in value references. */var T=p?p.toStringTag:void 0;g=/**
  * The base implementation of `getTag` without fallbacks for buggy environments.
  *
  * @private
  * @param {*} value The value to query.
  * @returns {string} Returns the `toStringTag`.
- */function(e){return null==e?void 0===e?"[object Undefined]":"[object Null]":T&&T in Object(e)?g(e):h(e)};var w={};w=/**
+ */function(t){return null==t?void 0===t?"[object Undefined]":"[object Null]":T&&T in Object(t)?m(t):O(t)};var w={};w=/**
  * Checks if `value` is object-like. A value is object-like if it's not `null`
  * and has a `typeof` result of "object".
  *
@@ -76,7 +76,7 @@ var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
  *
  * _.isObjectLike(null);
  * // => false
- */function(e){return null!=e&&"object"==typeof e},s=/**
+ */function(t){return null!=t&&"object"==typeof t},s=/**
  * Checks if `value` is classified as a `Symbol` primitive or object.
  *
  * @static
@@ -92,7 +92,7 @@ var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
  *
  * _.isSymbol('abc');
  * // => false
- */function(e){return"symbol"==typeof e||w(e)&&"[object Symbol]"==m(e)};/** Used as references for various `Number` constants. */var x=0/0,E=/^[-+]0x[0-9a-f]+$/i,L=/^0b[01]+$/i,k=/^0o[0-7]+$/i,I=parseInt;l=/**
+ */function(t){return"symbol"==typeof t||w(t)&&"[object Symbol]"==g(t)};/** Used as references for various `Number` constants. */var E=0/0,x=/^[-+]0x[0-9a-f]+$/i,I=/^0b[01]+$/i,L=/^0o[0-7]+$/i,D=parseInt;f=/**
  * Converts `value` to a number.
  *
  * @static
@@ -114,7 +114,7 @@ var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
  *
  * _.toNumber('3.2');
  * // => 3.2
- */function(e){if("number"==typeof e)return e;if(s(e))return x;if(r(e)){var t="function"==typeof e.valueOf?e.valueOf():e;e=r(t)?t+"":t}if("string"!=typeof e)return 0===e?e:+e;e=f(e);var n=L.test(e);return n||k.test(e)?I(e.slice(2),n?2:8):E.test(e)?x:+e};/* Built-in method references for those with the same name as other `lodash` methods. */var q=Math.max,D=Math.min;n=/**
+ */function(t){if("number"==typeof t)return t;if(s(t))return E;if(r(t)){var e="function"==typeof t.valueOf?t.valueOf():t;t=r(e)?e+"":e}if("string"!=typeof t)return 0===t?t:+t;t=c(t);var n=I.test(t);return n||L.test(t)?D(t.slice(2),n?2:8):x.test(t)?E:+t};/* Built-in method references for those with the same name as other `lodash` methods. */var M=Math.max,N=Math.min;n=/**
  * Creates a debounced function that delays invoking `func` until after `wait`
  * milliseconds have elapsed since the last time the debounced function was
  * invoked. The debounced function comes with a `cancel` method to cancel
@@ -167,16 +167,16 @@ var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
  *
  * // Cancel the trailing debounced invocation.
  * jQuery(window).on('popstate', debounced.cancel);
- */function(e,t,n){var o,a,u,f,c,v,d=0,s=!1,m=!1,p=!0;if("function"!=typeof e)throw TypeError("Expected a function");function g(t){var n=o,r=a;return o=a=void 0,d=t,f=e.apply(r,n)}function b(e){var n=e-v,r=e-d;// Either this is the first call, activity has stopped and we're at the
+ */function(t,e,n){var i,a,u,c,l,v,d=0,s=!1,g=!1,p=!0;if("function"!=typeof t)throw TypeError("Expected a function");function m(e){var n=i,r=a;return i=a=void 0,d=e,c=t.apply(r,n)}function b(t){var n=t-v,r=t-d;// Either this is the first call, activity has stopped and we're at the
 // trailing edge, the system time has gone backwards and we're treating
 // it as the trailing edge, or we've hit the `maxWait` limit.
-return void 0===v||n>=t||n<0||m&&r>=u}function y(){var e,n,r,o=i();if(b(o))return j(o);// Restart the timer.
-c=setTimeout(y,(e=o-v,n=o-d,r=t-e,m?D(r,u-n):r))}function j(e){return(// Only invoke if we have `lastArgs` which means `func` has been
+return void 0===v||n>=e||n<0||g&&r>=u}function y(){var t,n,r,i=o();if(b(i))return h(i);// Restart the timer.
+l=setTimeout(y,(t=i-v,n=i-d,r=e-t,g?N(r,u-n):r))}function h(t){return(// Only invoke if we have `lastArgs` which means `func` has been
 // debounced at least once.
-(c=void 0,p&&o)?g(e):(o=a=void 0,f))}function S(){var e,n=i(),r=b(n);if(o=arguments,a=this,v=n,r){if(void 0===c)return(// Reset any `maxWait` timer.
-d=e=v,// Start the timer for the trailing edge.
-c=setTimeout(y,t),s?g(e):f);if(m)return(// Handle invocations in a tight loop.
-clearTimeout(c),c=setTimeout(y,t),g(v))}return void 0===c&&(c=setTimeout(y,t)),f}return t=l(t)||0,r(n)&&(s=!!n.leading,u=(m="maxWait"in n)?q(l(n.maxWait)||0,t):u,p="trailing"in n?!!n.trailing:p),S.cancel=function(){void 0!==c&&clearTimeout(c),d=0,o=v=a=c=void 0},S.flush=function(){return void 0===c?f:j(i())},S},t=/**
+(l=void 0,p&&i)?m(t):(i=a=void 0,c))}function j(){var t,n=o(),r=b(n);if(i=arguments,a=this,v=n,r){if(void 0===l)return(// Reset any `maxWait` timer.
+d=t=v,// Start the timer for the trailing edge.
+l=setTimeout(y,e),s?m(t):c);if(g)return(// Handle invocations in a tight loop.
+clearTimeout(l),l=setTimeout(y,e),m(v))}return void 0===l&&(l=setTimeout(y,e)),c}return e=f(e)||0,r(n)&&(s=!!n.leading,u=(g="maxWait"in n)?M(f(n.maxWait)||0,e):u,p="trailing"in n?!!n.trailing:p),j.cancel=function(){void 0!==l&&clearTimeout(l),d=0,i=v=a=l=void 0},j.flush=function(){return void 0===l?c:h(o())},j},e=/**
  * Creates a throttled function that only invokes `func` at most once per
  * every `wait` milliseconds. The throttled function comes with a `cancel`
  * method to cancel delayed `func` invocations and a `flush` method to
@@ -219,6 +219,6 @@ clearTimeout(c),c=setTimeout(y,t),g(v))}return void 0===c&&(c=setTimeout(y,t)),f
  *
  * // Cancel the trailing throttled invocation.
  * jQuery(window).on('popstate', throttled.cancel);
- */function(e,t,i){var o=!0,a=!0;if("function"!=typeof e)throw TypeError("Expected a function");return r(i)&&(o="leading"in i?!!i.leading:o,a="trailing"in i?!!i.trailing:a),n(e,t,{leading:o,maxWait:t,trailing:a})};const M=document.querySelector(".feedback-form"),N=M.querySelector('input[name="email"]'),W=M.querySelector('textarea[name="message"]'),$=t(()=>{let e={email:N.value,message:W.value};localStorage.setItem("feedback-form-state",JSON.stringify(e))},500);N.addEventListener("input",$),W.addEventListener("input",$),document.addEventListener("DOMContentLoaded",function(){let e=localStorage.getItem("feedback-form-state");if(e){let t=JSON.parse(e);N.value=t.email,W.value=t.message}}),M.addEventListener("submit",function(e){e.preventDefault(),localStorage.removeItem("feedback-form-state");let t={email:N.value,message:W.value};console.log(t),N.value="",W.value=""}//# sourceMappingURL=03-feedback.10565506.js.map
-);
-//# sourceMappingURL=03-feedback.10565506.js.map
+ */function(t,e,o){var i=!0,a=!0;if("function"!=typeof t)throw TypeError("Expected a function");return r(o)&&(i="leading"in o?!!o.leading:i,a="trailing"in o?!!o.trailing:a),n(t,e,{leading:i,maxWait:e,trailing:a})};let W=document.querySelector(".feedback-form"),$="feedback-form-state",k={},J=e(t=>{k[t.target.name]=t.target.value.trim(),localStorage.setItem($,JSON.stringify(k))},500);W.addEventListener("input",J),W.addEventListener("submit",function(t){t.preventDefault(),localStorage.removeItem($),console.log(k),k={},t.target.reset()}),document.addEventListener("DOMContentLoaded",function(){try{let t=localStorage.getItem($);if(!t)return;k=JSON.parse(t),Object.entries(k).forEach(([t,e])=>{W.elements[t].value=e})}catch(t){console.log(t.message)}})}();//# sourceMappingURL=03-feedback.0c740a5f.js.map
+
+//# sourceMappingURL=03-feedback.0c740a5f.js.map
