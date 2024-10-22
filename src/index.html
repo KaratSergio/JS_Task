@@ -2,21 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework 8</title>
-    <link rel="stylesheet" href="css/common.css" />
+    <title>TotalMed</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <ul>
-      <li><a href="01-gallery.html">Image gallery</a></li>
-      <li><a href="02-video.html">Video playback</a></li>
-      <li><a href="03-feedback.html">Feedback form</a></li>
-      <li><a href="04-color-switcher.html">Color switcher</a></li>
-      <li><a href="05-timer.html">Countdown timer</a></li>
-      <li><a href="06-cat-api.html">CatApi</a></li>
-      <li><a href="07-movie-api.html">MovieApi</a></li>
+    <div class="wrapper">
+      <load src="partials/header.html" />
+      <main>
+        <load src="partials/console.html" />
+      </main>
+      <load src="partials/footer.html" />
+    </div>
 
-    </ul>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>

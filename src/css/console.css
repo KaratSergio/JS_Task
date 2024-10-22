@@ -1,0 +1,9 @@
+.console-box {
+  padding: 22px;
+  margin: 18px;
+  background: #343434;
+  color: bisque;
+  letter-spacing: 0.08em;
+  line-height: 1.9em;
+  border-radius: 12px;
+}
